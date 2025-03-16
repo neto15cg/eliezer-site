@@ -1,10 +1,11 @@
 import "./globals.css";
-import { Mulish } from "next/font/google";
+import { Fira_Sans } from "next/font/google";
 import { Metadata } from "next";
 
-const font = Mulish({
+const font = Fira_Sans({
   subsets: ["latin"],
   display: "swap",
+  weight: "300",
 });
 
 export const metadata: Metadata = {
