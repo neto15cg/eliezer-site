@@ -1,11 +1,13 @@
 "use client";
 import React, { useRef, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { Section } from "./components/section";
 import { Loading } from "../loading";
 import { useChatMessages } from "./hooks/useChatMessages";
 import { MessageType } from "./sections.types";
 
 export const Chat = () => {
+  const { t } = useTranslation();
   const inputRef = useRef<HTMLInputElement>(null);
   const messagesContainerRef = useRef<HTMLDivElement>(null);
   const { messages, isFetching, isSending, sendMessage } = useChatMessages();
@@ -35,7 +37,7 @@ export const Chat = () => {
 
   if (isFetching) {
     return (
-      <Section title="Ask me anything">
+      <Section title={t("chat.title")}>
         <div className="flex justify-center items-center h-[500px]">
           <div className="animate-pulse text-secondary-400">
             <Loading />
@@ -46,7 +48,7 @@ export const Chat = () => {
   }
 
   return (
-    <Section>
+    <Section title={t("chat.title")}>
       <div className="flex flex-col gap-4">
         <div
           ref={messagesContainerRef}
@@ -54,7 +56,7 @@ export const Chat = () => {
         >
           {messages.length === 0 ? (
             <div className="text-center text-secondary-400">
-              No messages yet. Start a conversation!
+              {t("chat.noMessages")}
             </div>
           ) : (
             <>
@@ -96,7 +98,9 @@ export const Chat = () => {
               ref={inputRef}
               type="text"
               placeholder={
-                isSending ? "Sending message..." : "Type your message..."
+                isSending
+                  ? t("chat.sendingMessage")
+                  : t("chat.inputPlaceholder")
               }
               disabled={isSending}
               className={`flex-1 px-4 py-2 rounded-lg bg-base-800 text-secondary-50 border border-secondary-700 focus:outline-none focus:border-secondary-500 transition-colors ${
@@ -108,7 +112,7 @@ export const Chat = () => {
               disabled={isSending}
               className="px-6 py-2 bg-secondary-600 hover:bg-secondary-500 text-secondary-50 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
             >
-              Send
+              {t("chat.sendButton")}
             </button>
           </div>
         </form>

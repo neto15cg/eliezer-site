@@ -1,6 +1,7 @@
 import { aboutTranslations } from "./about";
 import { commonTranslations } from "./common";
 import { experienceTranslations } from "./experience";
+import { chatTranslations } from "./chat";
 
 export const resources = {
   en: {
@@ -8,6 +9,7 @@ export const resources = {
       ...commonTranslations.en,
       ...aboutTranslations.en,
       ...experienceTranslations.en,
+      ...chatTranslations.en,
     },
   },
   pt: {
@@ -15,6 +17,7 @@ export const resources = {
       ...commonTranslations.pt,
       ...aboutTranslations.pt,
       ...experienceTranslations.pt,
+      ...chatTranslations.pt,
     },
   },
 };
