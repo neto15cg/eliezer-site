@@ -1,9 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { SectionLink } from "./components/section-link";
+import { useTranslation } from "react-i18next";
 
 export const Aside = () => {
+  const { t } = useTranslation();
+
   return (
     <aside className="md:sticky md:top-0 md:h-screen md:w-2/5 lg:w-2/4 p-6 py-12 bg-base-950 overflow-y-auto">
       <div className="flex flex-col h-full justify-between">
@@ -25,24 +30,19 @@ export const Aside = () => {
                   Eliezer Marques
                 </h2>
                 <h3 className="text-2xl text-base-400 font-medium">
-                  Senior Software Engineer
+                  {t("seniorDev")}
                 </h3>
               </div>
             </div>
-            <p className="text-base-300 mt-6 text-[1.2rem]">
-              I'm a fullstack web development, specialist in frontend
-              development and a backend entuxistic, with passion for scable
-              products with distributed computing. Graduated in Computer
-              Engineering.
-            </p>
+            <p className="text-base-300 mt-6 text-[1.2rem]">{t("intro")}</p>
           </header>
         </div>
         <nav className="space-y-2 flex flex-col my-10 md:my-0 lg:my-0">
-          <SectionLink href="#about">About</SectionLink>
-          <SectionLink href="#experience">Experience</SectionLink>
-          <SectionLink href="#projects">Projects</SectionLink>
+          <SectionLink href="#about">{t("about")}</SectionLink>
+          <SectionLink href="#experience">{t("experienceSection")}</SectionLink>
+          <SectionLink href="#projects">{t("projects")}</SectionLink>
           <SectionLink href="#chat">
-            Ask me anything{" "}
+            {t("askMe")}{" "}
             <span className="inline-block bg-secondary-600 text-xs font-semibold px-1.5 py-0.5 rounded ml-1 text-base-50">
               AI
             </span>

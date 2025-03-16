@@ -1,166 +1,109 @@
 import React from "react";
 import { Section } from "./components/section";
+import { Trans, useTranslation } from "react-i18next";
 
 export const Experience = () => {
+  const { t } = useTranslation();
+
+  const sectionTitle = t("experienceSection");
+
   return (
-    <Section title="Experience">
+    <Section title={sectionTitle}>
       <>
         <h3 className="text-2xl font-bold text-secondary-300 underline mt-8">
-          Senior Fullstack Developer
+          {t("experience.olist.title")}
         </h3>
         <p className="text-1xl underline">
-          <strong>Olist</strong> | May 2021 - Present | Remote
+          <strong>{t("experience.olist.company")}</strong> |{" "}
+          {t("experience.olist.period")} | {t("experience.olist.location")}
         </p>
 
         <ul className="list-disc list-inside text-lg">
           <li>
-            <strong>Catalog Squad:</strong> Decoupled a monitoring system into a
-            microservices architecture using Django, DRF, NestJS (BFF), and a
-            React SPA, improving performance, scalability, resilience, and team
-            autonomy.
+            <Trans i18nKey="experience.olist.achievements.catalog">
+              <strong>Catalog Squad:</strong>
+            </Trans>
           </li>
           <li>
-            <strong>Control Tower Squad:</strong> Developed an administrative
-            dashboard with React, NestJS, and DRF, enabling operational teams to
-            automate routine tasks, bulk price updates, and stockout management.
-          </li>
-
-          <li>
-            <strong>Growth Squad:</strong> Led the migration of institutional
-            websites and 500+ landing pages from WordPress to a headless CMS
-            (Strapi + Next.js), improving load speed by 70% and reducing page
-            development time from weeks to days.
+            <Trans i18nKey="experience.olist.achievements.controlTower">
+              <strong>Control Tower Squad:</strong>
+            </Trans>
           </li>
           <li>
-            <strong>Customer Journey Squad:</strong> Developed an agnostic
-            onboarding platform using a distributed architecture (React, DRF,
-            SNS, SQS), significantly improving customer activation. Currently
-            leading an AI integration initiative to optimize product migration
-            into the company's ERP.
+            <Trans i18nKey="experience.olist.achievements.growth">
+              <strong>Growth Squad:</strong>
+            </Trans>
+          </li>
+          <li>
+            <Trans i18nKey="experience.olist.achievements.customerJourney">
+              <strong>Customer Journey Squad:</strong>
+            </Trans>
           </li>
         </ul>
 
         <h3 className="text-2xl font-bold text-secondary-300 underline mt-8">
-          Frontend Developer
+          {t("experience.agilize.title")}
         </h3>
         <p className="text-lg underline">
-          <strong>Agilize Contabilidade</strong> | Mar 2020 - Present | Remote
+          <strong>{t("experience.agilize.company")}</strong> |{" "}
+          {t("experience.agilize.period")} | {t("experience.agilize.location")}
         </p>
 
         <ul className="list-disc list-inside text-lg">
-          <li>
-            Legacy System Maintenance & New System Development: Maintained
-            Angular-based legacy systems and built new HR and financial systems
-            using React.js, TypeScript, Module Federation, and Laravel. Ensured
-            quality with Jest, React Testing Library, and Cypress, and used
-            Styled Components with a custom component library (React & Svelte).
-          </li>
-          <li>
-            Financial System: Developed a financial management system enabling
-            users to efficiently oversee their company's financial situation.
-          </li>
-
-          <li>
-            HR System: Built an HR system to help companies effectively manage
-            their employees, contributing to improved customer retention and
-            acquisition through seamless integration with the accounting
-            platform.
-          </li>
+          <li>{t("experience.agilize.achievements.legacySystem")}</li>
+          <li>{t("experience.agilize.achievements.financialSystem")}</li>
+          <li>{t("experience.agilize.achievements.hrSystem")}</li>
         </ul>
-        <p className="text-lg">
-          These initiatives led to significant improvements in customer
-          retention and acquisition, as the systems seamlessly integrated with
-          our accounting platform.
-        </p>
+        <p className="text-lg">{t("experience.agilize.achievements.impact")}</p>
 
         <h3 className="text-2xl font-bold text-secondary-300 underline mt-8">
-          Fullstack Developer
+          {t("experience.avansys.title")}
         </h3>
         <p className="text-lg underline">
-          <strong>Avansys Tecnologia</strong> | Ago 2019 - Mar 2020 | Salvador,
-          Ba, Brazil
+          <strong>{t("experience.avansys.company")}</strong> |{" "}
+          {t("experience.avansys.period")} | {t("experience.avansys.location")}
         </p>
 
         <ul className="list-disc list-inside text-lg">
-          <li>
-            Legacy System Maintenance & New System Development: Maintained
-            Angular-based legacy systems and built new HR and financial systems
-            using React.js, TypeScript, Module Federation, and Laravel. Ensured
-            quality with Jest, React Testing Library, and Cypress, and used
-            Styled Components with a custom component library (React & Svelte).
-          </li>
-          <li>
-            Financial System: Developed a financial management system enabling
-            users to efficiently oversee their company's financial situation.
-          </li>
-
-          <li>
-            HR System: Built an HR system to help companies effectively manage
-            their employees, contributing to improved customer retention and
-            acquisition through seamless integration with the accounting
-            platform.
-          </li>
+          <li>{t("experience.avansys.achievements.legacySystem")}</li>
+          <li>{t("experience.avansys.achievements.financialSystem")}</li>
+          <li>{t("experience.avansys.achievements.hrSystem")}</li>
         </ul>
 
         <h3 className="text-2xl font-bold text-secondary-300 underline mt-8">
-          Fullstack Developer
+          {t("experience.falqon.title")}
         </h3>
         <p className="text-lg underline">
-          <strong>Falqon</strong> | Jan 2019 - Ago 2019 | Salvador, BA, Brazil
+          <strong>{t("experience.falqon.company")}</strong> |{" "}
+          {t("experience.falqon.period")} | {t("experience.falqon.location")}
         </p>
 
         <ul className="list-disc list-inside text-lg">
-          <li>
-            <strong> Web and Mobile Development:</strong> Expertise in
-            developing and maintaining web applications using React and mobile
-            applications using React Native. Proficient in utilizing tools like
-            Redux, Hooks, and Context API for state management, along with
-            TypeScript for type-safe coding.
-          </li>
-          <li>
-            <strong>Backend Development and Deployment:</strong> Skilled in
-            building and maintaining APIs using Golang, with experience in
-            deploying applications. Worked on diverse projects as a consultant,
-            including medical apps, lawyer websites, crawlers, and other
-            applications, leveraging Golang, React, and React Native.
-          </li>
-        </ul>
-        <h3 className="text-2xl font-bold text-secondary-300 underline mt-8">
-          Fullstack Developer
-        </h3>
-        <p className="text-lg underline">
-          <strong>Vasta</strong> | Jan 2018 - Jan 2019 | Vitória da Conquista,
-          BA, Brazil
-        </p>
-        <ul className="list-disc list-inside text-lg">
-          <li>
-            <strong>Web Application Development:</strong> Experienced in
-            developing APIs using Laravel and Node.js, along with building
-            hybrid mobile applications using the Ionic Framework. Worked on
-            projects such as farm management and delivery apps.
-          </li>
-          <li>
-            <strong>Backend Development and Deployment:</strong> Proficient in
-            developing web applications using Vue.js, contributing to the
-            creation of user-friendly and efficient web interfaces for various
-            projects.
-          </li>
+          <li>{t("experience.falqon.achievements.webMobile")}</li>
+          <li>{t("experience.falqon.achievements.backend")}</li>
         </ul>
 
         <h3 className="text-2xl font-bold text-secondary-300 underline mt-8">
-          Trainee
+          {t("experience.vasta.title")}
         </h3>
         <p className="text-lg underline">
-          <strong>Universidade do Sodoeste da Bahia</strong> | Fev 2016 - Aug
-          2017 | Vitória da Conquista, BA, Brazil
+          <strong>{t("experience.vasta.company")}</strong> |{" "}
+          {t("experience.vasta.period")} | {t("experience.vasta.location")}
         </p>
         <ul className="list-disc list-inside text-lg">
-          <li>
-            Developed a native Android application to assist waste collectors in
-            optimizing their daily collection routes by calculating the most
-            efficient path using Firebase and Google Maps APIs, which also
-            served as the foundation for my undergraduate thesis.
-          </li>
+          <li>{t("experience.vasta.achievements.web")}</li>
+          <li>{t("experience.vasta.achievements.backend")}</li>
+        </ul>
+
+        <h3 className="text-2xl font-bold text-secondary-300 underline mt-8">
+          {t("experience.trainee.title")}
+        </h3>
+        <p className="text-lg underline">
+          <strong>{t("experience.trainee.company")}</strong> |{" "}
+          {t("experience.trainee.period")} | {t("experience.trainee.location")}
+        </p>
+        <ul className="list-disc list-inside text-lg">
+          <li>{t("experience.trainee.description")}</li>
         </ul>
       </>
     </Section>
