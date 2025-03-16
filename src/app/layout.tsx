@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title: "Eliezer Marques",
   description: "Personal website of Eliezer Marques",
   icons: {
-    icon: "/favico.svg", // Caminho relativo ao arquivo do favicon
+    icon: "/favico.svg",
   },
 };
 

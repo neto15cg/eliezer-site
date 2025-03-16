@@ -6,13 +6,13 @@ export const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
 
   return (
-    <div className="absolute top-4 right-4 z-50 mr-6">
+    <div className="absolute top-4 right-4 z-50 mr-6  px-4 bg-base-800  border border-secondary-600 rounded-md py-1">
       <select
         onChange={(e) => i18n.changeLanguage(e.target.value)}
         value={i18n.language}
-        className="bg-base-800 text-base-50 border border-secondary-600 rounded-md px-4 py-1"
+        className="bg-base-800 text-base-50    px-4 py-1"
       >
-        <option value="pt">Português</option>
+        <option value="pt">Portuguse</option>
         <option value="en">English</option>
       </select>
     </div>

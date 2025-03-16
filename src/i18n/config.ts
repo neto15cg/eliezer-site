@@ -6,8 +6,8 @@ import { resources } from "./translations/index";
 
 i18n.use(initReactI18next).init({
   resources,
-  lng: "pt", // Set default language
-  fallbackLng: "pt",
+  lng: "pt",
+  fallbackLng: "en",
   interpolation: {
     escapeValue: false,
   },
