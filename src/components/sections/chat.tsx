@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Section } from "./components/section";
-import { mockMessages } from "@/app/mocks/chat-history";
+import { mockMessages } from "@/mocks/chat-history";
 import { Loading } from "../loading";
 
 type Message = {

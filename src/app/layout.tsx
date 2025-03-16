@@ -1,14 +1,18 @@
 import "./globals.css";
 import { Mulish } from "next/font/google";
+import { Metadata } from "next";
 
 const font = Mulish({
   subsets: ["latin"],
   display: "swap",
 });
 
-export const metadata = {
-  title: "Eliezer Site",
+export const metadata: Metadata = {
+  title: "Eliezer Marques",
   description: "Personal website of Eliezer Marques",
+  icons: {
+    icon: "/favico.svg", // Caminho relativo ao arquivo do favicon
+  },
 };
 
 export default function RootLayout({

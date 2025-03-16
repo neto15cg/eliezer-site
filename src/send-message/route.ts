@@ -12,6 +12,7 @@ export async function POST(request: Request) {
       reply,
     });
   } catch (error) {
+    console.log(error);
     return NextResponse.json(
       { error: "Failed to send message" },
       { status: 500 }

@@ -47,7 +47,7 @@ export const About = () => {
         </p>
 
         <p className="text-lg">
-          If I'm not coding I like to stay with my family and friends, go
+          If I&apos;m not coding I like to stay with my family and friends, go
           fishing and stay next to the nature. My passion is do everything with
           excellence and always learning new things.
         </p>

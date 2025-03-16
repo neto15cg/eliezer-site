@@ -1,5 +1,5 @@
-import { Aside } from "./components/aside/aside";
-import { Sections } from "./components/sections/sections";
+import { Aside } from "../components/aside/aside";
+import { Sections } from "../components/sections/sections";
 
 export default function Home() {
   return (
