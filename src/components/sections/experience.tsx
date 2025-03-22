@@ -10,10 +10,10 @@ export const Experience = () => {
   return (
     <Section title={sectionTitle}>
       <>
-        <h3 className="text-2xl font-bold text-secondary-300 underline mt-8">
+        <h3 className="text-2xl font-bold text-secondary-500  mt-8">
           {t("experience.olist.title")}
         </h3>
-        <p className="text-1xl underline">
+        <p className="text-1xl ">
           <strong>{t("experience.olist.company")}</strong> |{" "}
           {t("experience.olist.period")} | {t("experience.olist.location")}
         </p>
@@ -41,10 +41,10 @@ export const Experience = () => {
           </li>
         </ul>
 
-        <h3 className="text-2xl font-bold text-secondary-300 underline mt-8">
+        <h3 className="text-2xl font-bold text-secondary-500  mt-8">
           {t("experience.agilize.title")}
         </h3>
-        <p className="text-lg underline">
+        <p className="text-lg ">
           <strong>{t("experience.agilize.company")}</strong> |{" "}
           {t("experience.agilize.period")} | {t("experience.agilize.location")}
         </p>
@@ -56,10 +56,10 @@ export const Experience = () => {
         </ul>
         <p className="text-lg">{t("experience.agilize.achievements.impact")}</p>
 
-        <h3 className="text-2xl font-bold text-secondary-300 underline mt-8">
+        <h3 className="text-2xl font-bold text-secondary-500  mt-8">
           {t("experience.avansys.title")}
         </h3>
-        <p className="text-lg underline">
+        <p className="text-lg ">
           <strong>{t("experience.avansys.company")}</strong> |{" "}
           {t("experience.avansys.period")} | {t("experience.avansys.location")}
         </p>
@@ -70,10 +70,10 @@ export const Experience = () => {
           <li>{t("experience.avansys.achievements.hrSystem")}</li>
         </ul>
 
-        <h3 className="text-2xl font-bold text-secondary-300 underline mt-8">
+        <h3 className="text-2xl font-bold text-secondary-500  mt-8">
           {t("experience.falqon.title")}
         </h3>
-        <p className="text-lg underline">
+        <p className="text-lg ">
           <strong>{t("experience.falqon.company")}</strong> |{" "}
           {t("experience.falqon.period")} | {t("experience.falqon.location")}
         </p>
@@ -83,10 +83,10 @@ export const Experience = () => {
           <li>{t("experience.falqon.achievements.backend")}</li>
         </ul>
 
-        <h3 className="text-2xl font-bold text-secondary-300 underline mt-8">
+        <h3 className="text-2xl font-bold text-secondary-500  mt-8">
           {t("experience.vasta.title")}
         </h3>
-        <p className="text-lg underline">
+        <p className="text-lg ">
           <strong>{t("experience.vasta.company")}</strong> |{" "}
           {t("experience.vasta.period")} | {t("experience.vasta.location")}
         </p>
@@ -95,10 +95,10 @@ export const Experience = () => {
           <li>{t("experience.vasta.achievements.backend")}</li>
         </ul>
 
-        <h3 className="text-2xl font-bold text-secondary-300 underline mt-8">
+        <h3 className="text-2xl font-bold text-secondary-500  mt-8">
           {t("experience.trainee.title")}
         </h3>
-        <p className="text-lg underline">
+        <p className="text-lg ">
           <strong>{t("experience.trainee.company")}</strong> |{" "}
           {t("experience.trainee.period")} | {t("experience.trainee.location")}
         </p>

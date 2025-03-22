@@ -15,7 +15,7 @@ export const About = () => {
         </p>
         <p className="text-lg">{t("focusText")}</p>
 
-        <h3 className="text-2xl font-bold text-secondary-300 underline mt-8">
+        <h3 className="text-2xl font-bold text-secondary-500  mt-8">
           {t("experienceTitle")}
         </h3>
         <ul className="list-disc list-inside text-lg">
@@ -39,8 +39,7 @@ export const About = () => {
           </li>
           <li>
             <Trans i18nKey="experienceItems.devops">
-              <strong>DevOps Pratices:</strong> CI/CD pipelines and perfomance
-              otimization
+              <strong>s</strong> CI/CD pipelines and perfomance otimization
             </Trans>
           </li>
         </ul>

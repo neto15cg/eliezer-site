@@ -1,12 +1,14 @@
 export const SectionLink = ({
   href = "#",
   children,
+  onClick,
 }: {
   href?: string;
+  onClick?: () => void;
   children: React.ReactNode;
 }) => {
   return (
-    <div className="flex">
+    <div className="flex" onClick={onClick}>
       <a
         href={href}
         className="text-[1.3rem] block hover:text-base-50 transition-colors relative group font-medium "

@@ -35,7 +35,7 @@ export const Sections = () => {
   };
 
   return (
-    <div className="py-12">
+    <div className="pb-12">
       <div className="animate-fadeIn">{renderSection()}</div>
     </div>
   );

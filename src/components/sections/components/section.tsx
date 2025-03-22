@@ -12,7 +12,7 @@ export const Section = ({
       <div className="space-y-12">
         <section className="space-y-4">
           {title && (
-            <h2 className="text-3xl font-bold text-secondary-300 underline mb-6">
+            <h2 className="text-3xl font-bold text-secondary-500 mb-6">
               {title}
             </h2>
           )}

@@ -39,7 +39,7 @@ export const Chat = () => {
     return (
       <Section title={t("chat.title")}>
         <div className="flex justify-center items-center h-[500px]">
-          <div className="animate-pulse text-secondary-400">
+          <div className="animate-pulse text-secondary-500">
             <Loading />
           </div>
         </div>
@@ -52,10 +52,10 @@ export const Chat = () => {
       <div className="flex flex-col gap-4">
         <div
           ref={messagesContainerRef}
-          className="flex flex-col gap-4 h-[600px] overflow-y-auto p-4 rounded-lg bg-base-900"
+          className="flex flex-col gap-4 h-[600px] overflow-y-auto p-4 rounded-lg bg-base-950 border border-base-50"
         >
           {messages.length === 0 ? (
-            <div className="text-center text-secondary-400">
+            <div className="text-center text-secondary-500">
               {t("chat.noMessages")}
             </div>
           ) : (
@@ -70,7 +70,7 @@ export const Chat = () => {
                   <div
                     className={`max-w-[80%] p-3 rounded-lg ${
                       msg.sender === "user"
-                        ? "bg-secondary-600 text-secondary-50"
+                        ? "bg-secondary-200 text-base-950  "
                         : "bg-base-800 text-secondary-100"
                     }`}
                   >
@@ -103,7 +103,7 @@ export const Chat = () => {
                   : t("chat.inputPlaceholder")
               }
               disabled={isSending}
-              className={`flex-1 px-4 py-2 rounded-lg bg-base-800 text-secondary-50 border border-secondary-700 focus:outline-none focus:border-secondary-500 transition-colors ${
+              className={`flex-1 px-4 py-2 rounded-lg bg-base-950 text-secondary-50 border border-base-50 focus:outline-none focus:border-secondary-500 transition-colors ${
                 isSending ? "opacity-50 cursor-not-allowed" : ""
               }`}
             />

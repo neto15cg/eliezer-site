@@ -34,7 +34,7 @@ export const aboutTranslations = {
       cloud:
         "<0>Computação em Nuvem:</0> AWS Kit como S3, Cloudfront, RDS, ECR, SNS e SQS.",
       devops:
-        "<0>Práticas DevOps:</0> Pipelines CI/CD e otimização de performance",
+        "<0>Práticas DevOps:</0> Pipelines CI/CD e otimização de performance.",
     },
     teamText:
       "Gosto de ir além das habilidades técnicas e também me conectar com minha equipe para que tenhamos um excelente ambiente de trabalho e possamos unir forças para entregar o melhor de cada um.",
