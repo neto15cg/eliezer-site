@@ -12,7 +12,7 @@ export const LanguageSwitcher = () => {
         value={i18n.language}
         className="bg-base-800 text-base-50    px-4 py-1"
       >
-        <option value="pt">Portuguse</option>
+        <option value="pt">Português</option>
         <option value="en">English</option>
       </select>
     </div>
