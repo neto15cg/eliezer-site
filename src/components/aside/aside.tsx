@@ -1,6 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
-import Image from "next/image";
 import React from "react";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { SectionLink } from "./components/section-link";
@@ -16,13 +16,10 @@ export const Aside = () => {
           <header>
             <div className="flex gap-6 flex-col items-center md:flex-row lg:flex-row">
               <div className="w-44 h-44 mb-4 overflow-hidden rounded-sm relative">
-                <Image
+                <img
                   src="/eliezer_m.jpeg"
                   alt="Eliezer Marques profile"
-                  fill
-                  className="object-cover"
-                  priority
-                  quality={100}
+                  className="object-cover w-full h-full"
                 />
               </div>
               <div className="flex flex-col justify-center">
