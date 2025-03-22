@@ -3,8 +3,10 @@ import {
   ChatResponseType,
 } from "@/components/sections/sections.types";
 import { useState, useRef, useEffect } from "react";
+import axios from "axios";
 
 const STORAGE_KEY = "chat_conversation_id";
+const apiBaseUrl = process.env.NEXT_PUBLIC_API_URL || "";
 
 export const useChatMessages = () => {
   const [messages, setMessages] = useState<MessageType[]>([]);
@@ -28,14 +30,18 @@ export const useChatMessages = () => {
   const fetchConversationMessages = async (conversationId: string) => {
     setIsFetching(true);
     try {
-      const response = await fetch(
-        `/api/messages/conversation/${conversationId}`
+      const { data } = await axios.get(
+        `${apiBaseUrl}/messages/conversation/${conversationId}`,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+          },
+        }
       );
-      if (response.ok) {
-        const data = await response.json();
-        const formattedMessages = formatMessages(data);
-        setMessages(formattedMessages);
-      }
+
+      const formattedMessages = formatMessages(data);
+      setMessages(formattedMessages);
     } catch (error) {
       console.error("Failed to fetch messages:", error);
     } finally {
@@ -67,30 +73,31 @@ export const useChatMessages = () => {
 
   const sendMessage = async (message: string) => {
     setIsSending(true);
+
     try {
-      const response = await fetch("/api/chat", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
+      const { data } = await axios.post(
+        `${apiBaseUrl}/chat`,
+        {
           message,
           conversation_id: conversationId,
-        }),
-      });
-
-      if (response.ok) {
-        const data = await response.json();
-        const newConversationId = data[0]?.conversation_id;
-
-        if (!conversationId && newConversationId) {
-          setConversationId(newConversationId);
-          localStorage.setItem(STORAGE_KEY, newConversationId);
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+          },
         }
+      );
 
-        const formattedMessages = formatMessages(data);
-        setMessages(formattedMessages);
+      const newConversationId = data[0]?.conversation_id;
+
+      if (!conversationId && newConversationId) {
+        setConversationId(newConversationId);
+        localStorage.setItem(STORAGE_KEY, newConversationId);
       }
+
+      const formattedMessages = formatMessages(data);
+      setMessages(formattedMessages);
     } catch (error) {
       console.error("Failed to send message:", error);
     } finally {
