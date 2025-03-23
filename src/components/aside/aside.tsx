@@ -36,7 +36,7 @@ export const Aside = () => {
         {t("experienceSection")}
       </SectionLink>
       <SectionLink href="#projects" onClick={() => setIsMenuOpen(false)}>
-        {t("projects")}
+        {t("projectsSection")}
       </SectionLink>
       <SectionLink href="#chat" onClick={() => setIsMenuOpen(false)}>
         {t("askMe")}{" "}

@@ -10,7 +10,7 @@ export const Experience = () => {
   return (
     <Section title={sectionTitle}>
       <>
-        <h3 className="text-2xl font-bold text-secondary-500  mt-8">
+        <h3 className="text-2xl font-bold text-secondary-500 mt-8">
           {t("experience.olist.title")}
         </h3>
         <p className="text-1xl ">
