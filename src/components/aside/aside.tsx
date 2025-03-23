@@ -43,7 +43,7 @@ export const Aside = () => {
       </SectionLink>
       <SectionLink href="#chat" onClick={() => setIsMenuOpen(false)}>
         {t("askMe")}{" "}
-        <span className="inline-block bg-secondary-600 text-xs font-semibold px-1.5 py-0.5 rounded ml-1 text-base-50">
+        <span className="inline-block bg-secondary-700 text-xs font-semibold px-1.5 py-0.5 rounded ml-1 text-base-50">
           AI
         </span>
       </SectionLink>
