@@ -24,11 +24,13 @@ export const Chat = () => {
     const currentMessage = inputRef.current?.value || "";
     if (!currentMessage) return;
 
-    if (inputRef.current) {
-      inputRef.current.value = "";
-    }
     handleScrollToBottom();
-    await sendMessage(currentMessage);
+    const result = await sendMessage(currentMessage);
+    if (result) {
+      if (inputRef.current) {
+        inputRef.current.value = "";
+      }
+    }
   };
 
   useEffect(() => {

@@ -4,11 +4,21 @@ import {
 } from "@/components/sections/sections.types";
 import { useState, useRef, useEffect } from "react";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 
 const STORAGE_KEY = "chat_conversation_id";
 const apiBaseUrl = process.env.NEXT_PUBLIC_API_URL || "";
 
 export const useChatMessages = () => {
+  const { t } = useTranslation();
+  const initialGreetings: MessageType = {
+    id: "initial-greeting",
+    message: t("chat.initialGreeting"),
+    created_at: new Date().toLocaleString(),
+    sender: "system",
+    conversation_id: undefined,
+  };
+
   const [messages, setMessages] = useState<MessageType[]>([]);
   const [conversationId, setConversationId] = useState<string | null>(null);
   const [isFetching, setIsFetching] = useState(false);
@@ -22,6 +32,9 @@ export const useChatMessages = () => {
       if (savedConversationId) {
         setConversationId(savedConversationId);
         fetchConversationMessages(savedConversationId);
+      } else {
+        // Add initial greeting message
+        setMessages([initialGreetings]);
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -41,7 +54,7 @@ export const useChatMessages = () => {
       );
 
       const formattedMessages = formatMessages(data);
-      setMessages(formattedMessages);
+      setMessages([initialGreetings, ...formattedMessages]);
     } catch (error) {
       console.error("Failed to fetch messages:", error);
     } finally {
@@ -97,9 +110,11 @@ export const useChatMessages = () => {
       }
 
       const formattedMessages = formatMessages(data);
-      setMessages(formattedMessages);
+      setMessages([initialGreetings, ...formattedMessages]);
+      return true;
     } catch (error) {
       console.error("Failed to send message:", error);
+      return false;
     } finally {
       setIsSending(false);
     }
