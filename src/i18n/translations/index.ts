@@ -3,6 +3,7 @@ import { commonTranslations } from "./common";
 import { experienceTranslations } from "./experience";
 import { chatTranslations } from "./chat";
 import { projectsTranslations } from "./projects";
+import { skillsTranslations } from "./skills";
 
 export const resources = {
   en: {
@@ -12,6 +13,7 @@ export const resources = {
       ...experienceTranslations.en,
       ...chatTranslations.en,
       ...projectsTranslations.en,
+      ...skillsTranslations.en,
     },
   },
   pt: {
@@ -21,6 +23,7 @@ export const resources = {
       ...experienceTranslations.pt,
       ...chatTranslations.pt,
       ...projectsTranslations.pt,
+      ...skillsTranslations.pt,
     },
   },
 };

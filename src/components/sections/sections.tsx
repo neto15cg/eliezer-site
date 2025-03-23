@@ -4,6 +4,7 @@ import { About } from "./about";
 import { Experience } from "./experience";
 import { Projects } from "./projects";
 import { Chat } from "./chat";
+import { Skills } from "./skills";
 
 export const Sections = () => {
   const [activeSection, setActiveSection] = useState<string>("about");
@@ -29,6 +30,8 @@ export const Sections = () => {
         return <Projects />;
       case "chat":
         return <Chat />;
+      case "skills":
+        return <Skills />;
       default:
         return <></>;
     }

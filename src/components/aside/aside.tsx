@@ -38,6 +38,9 @@ export const Aside = () => {
       <SectionLink href="#projects" onClick={() => setIsMenuOpen(false)}>
         {t("projectsSection")}
       </SectionLink>
+      <SectionLink href="#skills" onClick={() => setIsMenuOpen(false)}>
+        {t("skillsSection")}
+      </SectionLink>
       <SectionLink href="#chat" onClick={() => setIsMenuOpen(false)}>
         {t("askMe")}{" "}
         <span className="inline-block bg-secondary-600 text-xs font-semibold px-1.5 py-0.5 rounded ml-1 text-base-50">

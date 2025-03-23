@@ -41,8 +41,21 @@
   }
 }
 
+@keyframes progressBar {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--progress);
+  }
+}
+
 .animate-fadeIn {
-  animation: fadeIn 0.5s ease-out forwards;
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.animate-progress-bar {
+  animation: progressBar 3.5s ease-out forwards;
 }
 
 html,
