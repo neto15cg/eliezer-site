@@ -83,8 +83,15 @@ export const Aside = () => {
         <button
           className="md:hidden fixed top-4 right-4 z-50 bg-secondary-600 p-4 rounded-full shadow-lg cursor-pointer"
           onClick={() => setIsMenuOpen(true)}
+          name="menu button"
+          title="menu button"
         >
-          <RiMenu3Line size={24} className="text-base-50" />
+          <RiMenu3Line
+            size={24}
+            className="text-base-50"
+            name="menu button"
+            title="menu button"
+          />
         </button>
 
         {isMenuOpen && (
@@ -93,8 +100,14 @@ export const Aside = () => {
               <button
                 className="absolute top-6 right-6 text-base-50 cursor-pointer"
                 onClick={() => setIsMenuOpen(false)}
+                name="close menu button"
+                title="close menu button"
               >
-                <RiCloseFill size={24} name="menu button" />
+                <RiCloseFill
+                  size={24}
+                  name="close menu icon"
+                  title="close menu icon"
+                />
               </button>
               <nav className="space-y-8 flex flex-col items-center">
                 <NavigationLinks />
