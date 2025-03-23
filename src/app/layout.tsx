@@ -10,7 +10,7 @@ import { ToastContainer } from "react-toastify";
 const font = Roboto_Condensed({
   subsets: ["latin"],
   display: "swap",
-  // weight: "300",
+  weight: "400",
 });
 
 export const metadata: Metadata = {
