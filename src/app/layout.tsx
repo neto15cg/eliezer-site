@@ -4,6 +4,8 @@ import I18nProvider from "@/i18n/i18n-provider";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import "./globals.css";
 import "../i18n/config";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 const font = Roboto_Condensed({
   subsets: ["latin"],
@@ -31,6 +33,18 @@ export default function RootLayout({
           <div className="mx-auto w-full h-full max-w-7xl">
             <LanguageSwitcher />
             {children}
+            <ToastContainer
+              position="top-right"
+              autoClose={3000}
+              hideProgressBar={false}
+              newestOnTop
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="dark"
+            />
           </div>
         </I18nProvider>
       </body>

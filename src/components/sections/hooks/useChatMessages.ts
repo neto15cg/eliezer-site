@@ -3,11 +3,11 @@ import {
   ChatResponseType,
 } from "@/components/sections/sections.types";
 import { useState, useRef, useEffect } from "react";
-import axios from "axios";
 import { useTranslation } from "react-i18next";
+import { toast } from "react-toastify";
+import { chatApi } from "@/api/api";
 
 const STORAGE_KEY = "chat_conversation_id";
-const apiBaseUrl = process.env.NEXT_PUBLIC_API_URL || "";
 
 export const useChatMessages = () => {
   const { t } = useTranslation();
@@ -43,20 +43,11 @@ export const useChatMessages = () => {
   const fetchConversationMessages = async (conversationId: string) => {
     setIsFetching(true);
     try {
-      const { data } = await axios.get(
-        `${apiBaseUrl}/messages/conversation/${conversationId}`,
-        {
-          headers: {
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
-          },
-        }
-      );
-
+      const data = await chatApi.getConversationMessages(conversationId);
       const formattedMessages = formatMessages(data);
       setMessages([initialGreetings, ...formattedMessages]);
-    } catch (error) {
-      console.error("Failed to fetch messages:", error);
+    } catch {
+      toast.error(t("chat.errorFetch"));
     } finally {
       setIsFetching(false);
     }
@@ -88,20 +79,7 @@ export const useChatMessages = () => {
     setIsSending(true);
 
     try {
-      const { data } = await axios.post(
-        `${apiBaseUrl}/chat`,
-        {
-          message,
-          conversation_id: conversationId,
-        },
-        {
-          headers: {
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
-          },
-        }
-      );
-
+      const data = await chatApi.sendMessage(message, conversationId);
       const newConversationId = data[0]?.conversation_id;
 
       if (!conversationId && newConversationId) {
@@ -112,8 +90,8 @@ export const useChatMessages = () => {
       const formattedMessages = formatMessages(data);
       setMessages([initialGreetings, ...formattedMessages]);
       return true;
-    } catch (error) {
-      console.error("Failed to send message:", error);
+    } catch {
+      toast.error(t("chat.errorSend"));
       return false;
     } finally {
       setIsSending(false);
