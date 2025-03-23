@@ -7,6 +7,12 @@ export const LanguageSwitcher = () => {
 
   return (
     <div className="absolute top-4 left-4 z-50 mr-6 px-2 bg-base-800 border border-secondary-600 rounded-md py-1">
+      <label
+        htmlFor="language-select"
+        className="text-base-50 text-sm mr-2 hidden"
+      >
+        Language:
+      </label>
       <select
         onChange={(e) => i18n.changeLanguage(e.target.value)}
         value={i18n.language}

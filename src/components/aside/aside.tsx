@@ -94,7 +94,7 @@ export const Aside = () => {
                 className="absolute top-6 right-6 text-base-50 cursor-pointer"
                 onClick={() => setIsMenuOpen(false)}
               >
-                <RiCloseFill size={24} />
+                <RiCloseFill size={24} name="menu button" />
               </button>
               <nav className="space-y-8 flex flex-col items-center">
                 <NavigationLinks />
