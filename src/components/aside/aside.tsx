@@ -57,18 +57,23 @@ export const Aside = () => {
         <div>
           <header>
             <div className="flex gap-6 flex-col items-center md:flex-row lg:flex-row">
-              <div className="w-44 h-44 mb-4 overflow-hidden rounded-sm relative">
-                <img
-                  src="/eliezer_m.jpeg"
-                  alt="Eliezer Marques profile"
-                  className="object-cover w-full h-full"
-                />
+              <div className="relative group">
+                <div className="w-44 h-44 overflow-hidden rounded-2xl relative shadow-2xl border-4 border-secondary-500/20 hover:scale-105 transition-all duration-300">
+                  <img
+                    src="/eliezer_m.jpeg"
+                    alt="Eliezer Marques profile"
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+                <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-secondary-500 rounded-full flex items-center justify-center shadow-lg">
+                  <div className="w-3 h-3 bg-base-50 rounded-full"></div>
+                </div>
               </div>
               <div className="flex flex-col justify-center w-full">
                 <h2 className="text-4xl font-bold mb-2 text-base-50">
                   Eliezer Marques
                 </h2>
-                <h3 className="text-2xl text-base-400 font-medium">
+                <h3 className="text-2xl text-secondary-400 font-semibold">
                   {t("seniorDev")}
                 </h3>
               </div>
