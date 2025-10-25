@@ -50,8 +50,11 @@ export const Chat = () => {
   }
 
   return (
-    <Section title={t("chat.title")}>
+    <Section id="chat" title={t("chat.title")}>
       <div className="flex flex-col gap-4">
+        <div className="text-center text-sm text-base-400 mb-2">
+          {t("chat.poweredBy")}
+        </div>
         <div
           ref={messagesContainerRef}
           className="flex flex-col gap-4 h-[600px] overflow-y-auto p-4 rounded-lg bg-base-950 border border-base-50"

@@ -1,19 +1,21 @@
 export const aboutTranslations = {
   en: {
     introText:
-      "Hi, I'm <1>Eliezer Marques</1>, a senior software engineer from Brazil with a degree in Computer Engineering. I'm currently working as a senior fullstack developer at Olist. I have experience in frontend development using JavaScript technologies and in backend development with Node.js, Golang, and Python.",
+      "Hi, I'm <1>Eliezer Marques</1>, a software development specialist from Brazil with a degree in Computer Engineering. I'm currently working as a software development specialist at Loggi. I have experience in frontend development using JavaScript technologies and in backend development with Node.js, Golang, and Python.",
     focusText:
       "I develop products with a focus on scalability and performance, while leading my team to follow best practices and deliver the best possible product to our customers.",
     experienceTitle: "My experience includes:",
     experienceItems: {
       frontend:
-        "<0>Frontend Development:</0> React, Nexjs, React Native and VanillaJs.",
+        "<0>Frontend Development:</0> React, Next.js, React Native and VanillaJS.",
       backend:
-        "<0>Backend Development:</0> NodeJs, NestJs, Gin (Golang) and Django (Python).",
+        "<0>Backend Development:</0> Node.js, NestJS, Gin (Golang) and Django (Python).",
+      databases:
+        "<0>Databases & Streaming:</0> MongoDB, PostgreSQL, Apache Kafka, SQS and SNS.",
       cloud:
-        "<0>Cloud Computing:</0> AWS Kit as S3, Cloudfront, RDS, ECR, SNS and SQS.",
+        "<0>Cloud Computing:</0> AWS Kit as S3, CloudFront, RDS, ECR, SNS and SQS.",
       devops:
-        "<0>DevOps Pratices:</0> CI/CD pipelines and perfomance otimization",
+        "<0>DevOps Practices:</0> CI/CD pipelines and performance optimization",
     },
     teamText:
       "I like to go beyond tech skills but also connecting with my team so that we have an excellent work environment and we can join forces to deliver the best of each one.",
@@ -22,17 +24,19 @@ export const aboutTranslations = {
   },
   pt: {
     introText:
-      "Olá, eu sou <1>Eliezer Marques</1>, um engenheiro de software sênior do Brasil com formação em Engenharia da Computação. Atualmente trabalho como desenvolvedor fullstack sênior na Olist. Tenho experiência em desenvolvimento frontend usando tecnologias JavaScript e em desenvolvimento backend com Node.js, Golang e Python.",
+      "Olá, eu sou <1>Eliezer Marques</1>, um especialista em desenvolvimento de software do Brasil com formação em Engenharia da Computação. Atualmente trabalho como especialista em desenvolvimento de software na Loggi. Tenho experiência em desenvolvimento frontend usando tecnologias JavaScript e em desenvolvimento backend com Node.js, Golang e Python.",
     focusText:
       "Desenvolvo produtos com foco em escalabilidade e performance, enquanto lidero minha equipe a seguir as melhores práticas e entregar o melhor produto possível aos nossos clientes.",
     experienceTitle: "Minha experiência inclui:",
     experienceItems: {
       frontend:
-        "<0>Desenvolvimento Frontend:</0> React, Nexjs, React Native e VanillaJs.",
+        "<0>Desenvolvimento Frontend:</0> React, Next.js, React Native e VanillaJS.",
       backend:
-        "<0>Desenvolvimento Backend:</0> NodeJs, NestJs, Gin (Golang) e Django (Python).",
+        "<0>Desenvolvimento Backend:</0> Node.js, NestJS, Gin (Golang) e Django (Python).",
+      databases:
+        "<0>Bancos de Dados & Streaming:</0> MongoDB, PostgreSQL, Apache Kafka, SQS e SNS.",
       cloud:
-        "<0>Computação em Nuvem:</0> AWS Kit como S3, Cloudfront, RDS, ECR, SNS e SQS.",
+        "<0>Computação em Nuvem:</0> AWS Kit como S3, CloudFront, RDS, ECR, SNS e SQS.",
       devops:
         "<0>Práticas DevOps:</0> Pipelines CI/CD e otimização de performance.",
     },

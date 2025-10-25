@@ -50,12 +50,55 @@
   }
 }
 
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
 .animate-fadeIn {
   animation: fadeIn 0.3s ease-out forwards;
 }
 
 .animate-progress-bar {
   animation: progressBar 3.5s ease-out forwards;
+}
+
+.animate-gradient {
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 4s ease-in-out infinite;
 }
 
 html,
@@ -67,22 +110,56 @@ body {
 body {
   color: var(--color-secondary-50);
   background: linear-gradient(
-    135deg,
-    var(--color-secondary-950) 0%,
-    var(--color-base-950) 100%
+    -45deg,
+    var(--color-secondary-950),
+    var(--color-base-950),
+    var(--color-secondary-900),
+    var(--color-base-900)
   );
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
-  overflow-y: auto; /* Ensure scrolling works on body */
+  overflow-y: auto;
+  font-feature-settings: "rlig" 1, "calt" 1;
+  text-rendering: optimizeLegibility;
 }
 
 strong {
   color: var(--color-secondary-400);
+  font-weight: 600;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.875rem;
+  font-weight: 600;
+}
+
+p {
+  line-height: 1.7;
+  font-weight: 400;
 }
 
 li {
-  padding: 0.4rem 0;
+  padding: 0.5rem 0;
+  line-height: 1.6;
 }
 
 ::selection {

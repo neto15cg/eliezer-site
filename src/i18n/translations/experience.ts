@@ -1,10 +1,20 @@
 export const experienceTranslations = {
   en: {
     experience: {
+      integrations: {
+        title: "Software Development Specialist",
+        company: "Loggi",
+        period: "May 2025 - Present",
+        location: "Remote",
+        achievements: {
+          integrations:
+            "<0>Integrations Squad:</0> Working in the integrations squad, responsible for integrating clients with major e-commerce platforms. We develop and maintain integrations with Amazon, Shopee, Shein, Mercado Livre, and other leading marketplaces, processing millions of integration events including package tracking, shipping status updates, invoices, and CTEs for clients.",
+        },
+      },
       olist: {
         title: "Senior Fullstack Developer",
         company: "Olist",
-        period: "May 2021 - Present",
+        period: "May 2021 - May 2025",
         location: "Remote",
         achievements: {
           catalog:
@@ -20,7 +30,7 @@ export const experienceTranslations = {
       agilize: {
         title: "Frontend Developer",
         company: "Agilize Contabilidade",
-        period: "Mar 2020 - Present",
+        period: "Mar 2020 - May 2025",
         location: "Remote",
         achievements: {
           legacySystem:
@@ -82,10 +92,20 @@ export const experienceTranslations = {
   },
   pt: {
     experience: {
+      integrations: {
+        title: "Especialista em Desenvolvimento de Software",
+        company: "Loggi",
+        period: "Maio de 2025 - Presente",
+        location: "Remoto",
+        achievements: {
+          integrations:
+            "<0>Squad de Integrações:</0> Trabalho no squad de integrações, responsáveis por integrar clientes com as principais plataformas de e-commerce. Desenvolvemos e mantemos integrações com Amazon, Shopee, Shein, Mercado Livre e outras marketplaces líderes, processando milhões de eventos de integração incluindo rastreamento de pacotes, atualizações de status de envio, notas fiscais e CTEs para os clientes.",
+        },
+      },
       olist: {
         title: "Desenvolvedor Fullstack Sênior",
         company: "Olist",
-        period: "Maio 2021 - Presente",
+        period: "Maio 2021 - Maio 2025",
         location: "Remoto",
         achievements: {
           catalog:
@@ -101,7 +121,7 @@ export const experienceTranslations = {
       agilize: {
         title: "Desenvolvedor Frontend",
         company: "Agilize Contabilidade",
-        period: "Mar 2020 - Presente",
+        period: "Mar 2020 - Maio 2025",
         location: "Remoto",
         achievements: {
           legacySystem:

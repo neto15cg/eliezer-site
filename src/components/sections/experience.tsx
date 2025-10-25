@@ -8,8 +8,24 @@ export const Experience = () => {
   const sectionTitle = t("experienceSection");
 
   return (
-    <Section title={sectionTitle}>
+    <Section id="experience" title={sectionTitle}>
       <>
+        <h3 className="text-2xl font-bold text-secondary-500 mt-8">
+          {t("experience.integrations.title")}
+        </h3>
+        <p className="text-1xl ">
+          <strong>{t("experience.integrations.company")}</strong> |{" "}
+          {t("experience.integrations.period")} | {t("experience.integrations.location")}
+        </p>
+
+        <ul className="list-disc list-inside text-lg">
+          <li>
+            <Trans i18nKey="experience.integrations.achievements.integrations">
+              <strong>Integrations Squad:</strong>
+            </Trans>
+          </li>
+        </ul>
+
         <h3 className="text-2xl font-bold text-secondary-500 mt-8">
           {t("experience.olist.title")}
         </h3>

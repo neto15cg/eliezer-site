@@ -6,7 +6,7 @@ export const Projects = () => {
   const { t } = useTranslation();
 
   return (
-    <Section title={t("projectsSection")}>
+    <Section id="projects" title={t("projectsSection")}>
       <h3 className="text-2xl font-bold text-secondary-500 mt-8">
         {t("projects.onboarding.title")}
       </h3>

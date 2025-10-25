@@ -2,6 +2,7 @@ export const chatTranslations = {
   en: {
     chat: {
       title: "Ask me anything",
+      poweredBy: "Powered by OpenAI GPT",
       noMessages: "No messages yet. Start a conversation!",
       inputPlaceholder: "Type your message...",
       sendingMessage: "Sending message...",
@@ -15,6 +16,7 @@ export const chatTranslations = {
   pt: {
     chat: {
       title: "Me pergunte qualquer coisa",
+      poweredBy: "Powered by OpenAI GPT",
       noMessages: "Nenhuma mensagem ainda. Inicie uma conversa!",
       inputPlaceholder: "Digite sua mensagem...",
       sendingMessage: "Enviando mensagem...",

@@ -27,6 +27,7 @@ export const Aside = () => {
     };
   }, [isMenuOpen]);
 
+
   const NavigationLinks = () => (
     <>
       <SectionLink href="#about" onClick={() => setIsMenuOpen(false)}>

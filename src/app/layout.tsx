@@ -1,4 +1,4 @@
-import { Roboto_Condensed } from "next/font/google";
+import { Inter } from "next/font/google";
 import { Metadata } from "next";
 import I18nProvider from "@/i18n/i18n-provider";
 import { LanguageSwitcher } from "@/components/language-switcher";
@@ -7,10 +7,10 @@ import "./globals.css";
 import "../i18n/config";
 import "react-toastify/dist/ReactToastify.css";
 
-const font = Roboto_Condensed({
+const font = Inter({
   subsets: ["latin"],
   display: "swap",
-  weight: "400",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
