@@ -52,37 +52,49 @@ export const Aside = () => {
   );
 
   return (
-    <aside className="md:sticky md:top-0 md:h-screen md:w-2/5 lg:w-2/4 p-6 py-24 overflow-y-auto">
+    <aside className="md:sticky md:top-0 md:h-screen md:w-2/5 lg:w-2/4 p-6 py-24 md:py-24 md:px-8 overflow-y-auto">
       <div className="flex flex-col h-full justify-between">
         <div>
           <header>
-            <div className="flex gap-6 flex-col items-center md:flex-row lg:flex-row">
+            <div className="flex gap-6 flex-col items-center md:flex-col lg:flex-row md:items-start">
               <div className="relative group">
-                <div className="w-44 h-44 overflow-hidden rounded-2xl relative shadow-2xl border-4 border-secondary-500/20 hover:scale-105 transition-all duration-300">
-                  <img
-                    src="/eliezer_m.jpeg"
-                    alt="Eliezer Marques profile"
-                    className="object-cover w-full h-full"
-                  />
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-tr from-secondary-400/20 to-secondary-600/20 rounded-3xl blur-xl"></div>
+                  <div className="relative w-44 h-44 md:w-40 md:h-40 overflow-hidden rounded-3xl shadow-2xl border-2 border-secondary-500/30 bg-gradient-to-br from-secondary-500/10 to-transparent">
+                    <div className="absolute inset-0 bg-gradient-to-br from-secondary-400/10 to-transparent z-10"></div>
+                    <img
+                      src="/eliezer_m.jpeg"
+                      alt="Eliezer Marques profile"
+                      className="object-cover w-full h-full relative z-0"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-secondary-900/40 to-transparent z-20"></div>
+                  </div>
                 </div>
                 <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-secondary-500 rounded-full flex items-center justify-center shadow-lg">
                   <div className="w-3 h-3 bg-base-50 rounded-full"></div>
                 </div>
               </div>
-              <div className="flex flex-col justify-center w-full">
-                <h2 className="text-4xl font-bold mb-2 text-base-50">
-                  Eliezer Marques
-                </h2>
-                <h3 className="text-2xl text-secondary-400 font-semibold">
-                  {t("seniorDev")}
-                </h3>
+              <div className="flex flex-col justify-center w-full text-center md:text-left">
+                <div className="space-y-2">
+                  <h2 className="text-4xl md:text-3xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-secondary-300 to-secondary-500 mb-1">
+                    Eliezer Marques
+                  </h2>
+                  <div className="flex items-baseline gap-3 flex-wrap justify-center md:justify-start">
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-gradient-to-br from-secondary-500/10 to-secondary-700/5 border border-secondary-500/20">
+                      <div className="w-2 h-2 rounded-full bg-secondary-500 animate-pulse"></div>
+                      <span className="text-base md:text-lg text-secondary-300 font-medium">
+                        {t("seniorDev")}
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <p className="text-base-300 mt-6 text-[1.2rem]">{t("intro")}</p>
+            <p className="text-base-300 mt-6 text-[1.2rem] md:text-base md:mt-4 text-center md:text-left">{t("intro")}</p>
           </header>
         </div>
 
-        <nav className="hidden md:flex space-y-2 flex-col my-10 md:my-0 lg:my-0">
+        <nav className="hidden md:flex space-y-2 flex-col my-10 md:my-6 lg:my-0">
           <NavigationLinks />
         </nav>
 
@@ -122,9 +134,9 @@ export const Aside = () => {
           </div>
         )}
 
-        <footer className="text-center text-base-300 mt-8">
+        <footer className="text-center text-base-300 mt-8 md:mt-6">
           <div className="container mx-auto flex flex-col">
-            <div className="flex space-x-6">
+            <div className="flex space-x-6 justify-center md:justify-start">
               <a
                 href="https://github.com/neto15cg"
                 target="_blank"

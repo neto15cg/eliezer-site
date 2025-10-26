@@ -1,8 +1,10 @@
 export const experienceTranslations = {
   en: {
     experience: {
+      introduction:
+        "I have over 9 years of professional experience in software engineering. I've worked in various sectors including e-commerce, fintech, edtech, and logistics. My career includes experience from startups to scale-ups, focusing on building scalable and high-performance systems.",
       integrations: {
-        title: "Software Development Specialist",
+        title: "Software Engineering Specialist",
         company: "Loggi",
         period: "May 2025 - Present",
         location: "Remote",
@@ -12,7 +14,7 @@ export const experienceTranslations = {
         },
       },
       olist: {
-        title: "Senior Fullstack Developer",
+        title: "Senior Software Engineer",
         company: "Olist",
         period: "May 2021 - May 2025",
         location: "Remote",
@@ -28,7 +30,7 @@ export const experienceTranslations = {
         },
       },
       agilize: {
-        title: "Frontend Developer",
+        title: "Frontend Software Engineer",
         company: "Agilize Contabilidade",
         period: "Mar 2020 - May 2025",
         location: "Remote",
@@ -44,7 +46,7 @@ export const experienceTranslations = {
         },
       },
       avansys: {
-        title: "Fullstack Developer",
+        title: "Software Engineer",
         company: "Avansys Tecnologia",
         period: "Ago 2019 - Mar 2020",
         location: "Salvador, Ba, Brazil",
@@ -58,7 +60,7 @@ export const experienceTranslations = {
         },
       },
       falqon: {
-        title: "Fullstack Developer",
+        title: "Software Engineer",
         company: "Falqon",
         period: "Jan 2019 - Ago 2019",
         location: "Salvador, BA, Brazil",
@@ -70,7 +72,7 @@ export const experienceTranslations = {
         },
       },
       vasta: {
-        title: "Fullstack Developer",
+        title: "Software Engineer",
         company: "Vasta",
         period: "Jan 2018 - Jan 2019",
         location: "Vitória da Conquista, BA, Brazil",
@@ -92,8 +94,10 @@ export const experienceTranslations = {
   },
   pt: {
     experience: {
+      introduction:
+        "Tenho mais de 9 anos de experiência profissional em engenharia de software. Trabalhei em diversos setores incluindo e-commerce, fintech, edtech e logística. Minha carreira inclui experiência de startups a scale-ups, com foco em construir sistemas escaláveis e de alto desempenho.",
       integrations: {
-        title: "Especialista em Desenvolvimento de Software",
+        title: "Engenheiro de Software Especialista",
         company: "Loggi",
         period: "Maio de 2025 - Presente",
         location: "Remoto",
@@ -103,7 +107,7 @@ export const experienceTranslations = {
         },
       },
       olist: {
-        title: "Desenvolvedor Fullstack Sênior",
+        title: "Engenheiro de Software Sênior",
         company: "Olist",
         period: "Maio 2021 - Maio 2025",
         location: "Remoto",
@@ -119,7 +123,7 @@ export const experienceTranslations = {
         },
       },
       agilize: {
-        title: "Desenvolvedor Frontend",
+        title: "Engenheiro de Software Frontend",
         company: "Agilize Contabilidade",
         period: "Mar 2020 - Maio 2025",
         location: "Remoto",
@@ -135,7 +139,7 @@ export const experienceTranslations = {
         },
       },
       avansys: {
-        title: "Desenvolvedor Fullstack",
+        title: "Engenheiro de Software",
         company: "Avansys Tecnologia",
         period: "Ago 2019 - Mar 2020",
         location: "Salvador, BA, Brasil",
@@ -149,7 +153,7 @@ export const experienceTranslations = {
         },
       },
       falqon: {
-        title: "Desenvolvedor Fullstack",
+        title: "Engenheiro de Software",
         company: "Falqon",
         period: "Jan 2019 - Ago 2019",
         location: "Salvador, BA, Brasil",
@@ -161,7 +165,7 @@ export const experienceTranslations = {
         },
       },
       vasta: {
-        title: "Desenvolvedor Fullstack",
+        title: "Engenheiro de Software",
         company: "Vasta",
         period: "Jan 2018 - Jan 2019",
         location: "Vitória da Conquista, BA, Brasil",

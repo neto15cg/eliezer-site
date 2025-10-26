@@ -1,7 +1,7 @@
 export const aboutTranslations = {
   en: {
     introText:
-      "Hi, I'm <1>Eliezer Marques</1>, a software development specialist from Brazil with a degree in Computer Engineering. I'm currently working as a software development specialist at Loggi. I have experience in frontend development using JavaScript technologies and in backend development with Node.js, Golang, and Python.",
+      "Hi, I'm <1>Eliezer Marques</1>, a software engineer from Brazil with a degree in Computer Engineering. I'm currently working as a software engineering specialist at Loggi. I have experience in frontend development using JavaScript technologies and in backend development with Node.js, Golang, and Python.",
     focusText:
       "I develop products with a focus on scalability and performance, while leading my team to follow best practices and deliver the best possible product to our customers.",
     experienceTitle: "My experience includes:",
@@ -24,7 +24,7 @@ export const aboutTranslations = {
   },
   pt: {
     introText:
-      "Olá, eu sou <1>Eliezer Marques</1>, um especialista em desenvolvimento de software do Brasil com formação em Engenharia da Computação. Atualmente trabalho como especialista em desenvolvimento de software na Loggi. Tenho experiência em desenvolvimento frontend usando tecnologias JavaScript e em desenvolvimento backend com Node.js, Golang e Python.",
+      "Olá, eu sou <1>Eliezer Marques</1>, um engenheiro de software do Brasil com formação em Engenharia da Computação. Atualmente trabalho como engenheiro de software especialista na Loggi. Tenho experiência em desenvolvimento frontend usando tecnologias JavaScript e em desenvolvimento backend com Node.js, Golang e Python.",
     focusText:
       "Desenvolvo produtos com foco em escalabilidade e performance, enquanto lidero minha equipe a seguir as melhores práticas e entregar o melhor produto possível aos nossos clientes.",
     experienceTitle: "Minha experiência inclui:",
