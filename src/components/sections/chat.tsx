@@ -140,7 +140,7 @@ export const Chat = () => {
             </div>
           ) : (
             <>
-              {messages.map((msg: MessageType, index: number) => (
+              {messages.map((msg: MessageType) => (
                 <div
                   key={msg.id}
                   className={`flex ${
