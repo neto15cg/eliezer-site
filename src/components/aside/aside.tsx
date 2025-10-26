@@ -59,18 +59,26 @@ export const Aside = () => {
             <div className="flex gap-6 flex-col items-center md:flex-col lg:flex-row md:items-start">
               <div className="relative group">
                 <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-tr from-secondary-400/20 to-secondary-600/20 rounded-3xl blur-xl"></div>
-                  <div className="relative w-44 h-44 md:w-40 md:h-40 overflow-hidden rounded-3xl shadow-2xl border-2 border-secondary-500/30 bg-gradient-to-br from-secondary-500/10 to-transparent">
-                    <div className="absolute inset-0 bg-gradient-to-br from-secondary-400/10 to-transparent z-10"></div>
+                  <div className="absolute inset-0 bg-gradient-to-tr from-secondary-400/20 to-secondary-600/20 rounded-3xl blur-xl group-hover:blur-2xl group-hover:from-secondary-300/50 group-hover:to-secondary-500/50 transition-all duration-500"></div>
+                  
+                  <div className="absolute inset-[-4px] rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <div className="absolute inset-0 border-2 border-secondary-500 rounded-3xl animate-spin" style={{ animationDuration: '3s' }}></div>
+                  </div>
+                  
+                  <div className="relative w-44 h-44 md:w-40 md:h-40 overflow-hidden rounded-3xl shadow-2xl border-2 border-secondary-500/30 bg-gradient-to-br from-secondary-500/10 to-transparent group-hover:border-secondary-400/70 group-hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] transition-all duration-500">
+                    <div className="absolute inset-0 bg-gradient-to-br from-secondary-400/10 to-transparent z-10 group-hover:from-secondary-300/30 transition-all duration-500"></div>
                     <img
                       src="/eliezer_m.jpeg"
                       alt="Eliezer Marques profile"
-                      className="object-cover w-full h-full relative z-0"
+                      className="object-cover w-full h-full relative z-0 group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-secondary-900/40 to-transparent z-20"></div>
+                    
+                    <div className="absolute inset-0 rounded-full bg-secondary-400/10 opacity-0 group-hover:opacity-100 animate-ping"></div>
                   </div>
                 </div>
-                <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-secondary-500 rounded-full flex items-center justify-center shadow-lg">
+                
+                <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-secondary-500 rounded-full flex items-center justify-center shadow-lg group-hover:scale-125 group-hover:bg-green-500 group-hover:shadow-[0_0_20px_rgba(34,197,94,0.8)] transition-all duration-500">
                   <div className="w-3 h-3 bg-base-50 rounded-full"></div>
                 </div>
               </div>
