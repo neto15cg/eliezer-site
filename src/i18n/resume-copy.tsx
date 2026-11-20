@@ -1,4 +1,8 @@
 export const siteUrl = "https://eliezer-marques.click";
+export const profileLinks = {
+  linkedin: "https://www.linkedin.com/in/eliezer-marques/",
+  github: "https://github.com/neto15cg",
+};
 
 export const locales = {
   "pt-BR": { code: "PT", name: "Português", path: "/", openGraphLocale: "pt_BR" },
@@ -55,7 +59,7 @@ export const resumeCopy = {
       customerExperience: (
         <>
           Também sou responsável pela engenharia do time de Experiência do Cliente (CX), onde desenvolvo agentes de IA para atendimento.
-          {" "}O sistema processa em média <strong>200 mil atendimentos por mês</strong>, e os agentes conduzem <strong>mais de 70%</strong> deles do início ao fim.
+          {" "}O sistema processa em média <span className="experience-metric">200 mil atendimentos por mês</span>, e os agentes conduzem <span className="experience-metric">mais de 70%</span> deles do início ao fim.
         </>
       ),
     },
@@ -123,7 +127,7 @@ export const resumeCopy = {
       customerExperience: (
         <>
           I also oversee engineering for the Customer Experience (CX) team, where I develop AI agents for customer support.
-          {" "}The system handles an average of <strong>200,000 support requests per month</strong>. AI agents handle <strong>over 70%</strong> of those requests from start to finish.
+          {" "}The system handles an average of <span className="experience-metric">200,000 support requests per month</span>. AI agents handle <span className="experience-metric">over 70%</span> of those requests from start to finish.
         </>
       ),
     },

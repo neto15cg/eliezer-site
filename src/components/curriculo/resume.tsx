@@ -1,10 +1,7 @@
 import Image from "next/image";
 import type { ReactNode } from "react";
-import { locales, resumeCopy, type ResumeLocale } from "@/i18n/resume-copy";
+import { locales, profileLinks, resumeCopy, type ResumeLocale } from "@/i18n/resume-copy";
 import { IntegrationSignal, LanguageLink, PrintButton } from "./controls";
-
-const linkedinUrl = "https://www.linkedin.com/in/eliezer-marques/";
-const githubUrl = "https://github.com/neto15cg";
 
 export function Resume({ locale }: { locale: ResumeLocale }) {
   const copy = resumeCopy[locale];
@@ -17,12 +14,13 @@ export function Resume({ locale }: { locale: ResumeLocale }) {
         <section className="hero" id="about" aria-labelledby="name">
           <div className="shell hero-inner">
             <div className="hero-copy">
-              <p className="eyebrow hero-role">{copy.loggi.role}</p>
               <h1 id="name">Eliezer <span>Marques</span></h1>
+              <p className="eyebrow hero-role">{copy.loggi.role}</p>
+              <p className="print-contact"><a href={profileLinks.linkedin}>{profileLinks.linkedin}</a></p>
               <p className="hero-lead">{copy.headline}</p>
               <p className="hero-summary">{copy.summary}</p>
               <div className="actions">
-                <a className="button button-primary" href={linkedinUrl}>{copy.linkedin}</a>
+                <a className="button button-primary" href={profileLinks.linkedin}>{copy.linkedin}</a>
                 <a className="button button-secondary" href="#projects">{copy.viewProjects}</a>
               </div>
             </div>
@@ -64,9 +62,9 @@ export function Resume({ locale }: { locale: ResumeLocale }) {
           <div className="contact-inner">
             <h2 id="contact-title">{copy.contactTitle}</h2>
             <div className="contact-actions">
-              <a className="button button-primary" href={linkedinUrl}>{copy.linkedin}</a>
+              <a className="button button-primary" href={profileLinks.linkedin}>{copy.linkedin}</a>
               <div className="contact-links">
-                <a className="text-link" href={githubUrl}>GitHub</a>
+                <a className="text-link" href={profileLinks.github}>GitHub</a>
                 <PrintButton label={copy.print} />
               </div>
             </div>
@@ -179,7 +177,7 @@ function ResumeExperience({ locale }: { locale: ResumeLocale }) {
               <p>{copy.earlierDescription}</p>
             </li>
           </ol>
-          <a className="text-link" href={linkedinUrl}>{copy.viewExperience}</a>
+          <a className="text-link" href={profileLinks.linkedin}>{copy.viewExperience}</a>
         </div>
       </div>
     </section>

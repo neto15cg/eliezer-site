@@ -221,6 +221,9 @@ nav a:is(
   padding-block: 4rem 3.75rem;
 }
 
+.hero-copy { display: flex; flex-direction: column; }
+.print-contact { display: none; }
+
 .eyebrow, .period, .portrait figcaption {
   font-family: var(--mono);
   font-size: .82rem;
@@ -231,6 +234,7 @@ nav a:is(
 
 .hero-role {
   display: flex;
+  order: -1;
   align-items: center;
   gap: .7rem;
   margin-bottom: 1.25rem;
@@ -433,6 +437,7 @@ nav a:is(
 .timeline li:first-child { padding-top: 0; }
 .timeline h3, .profile-grid h3 { font-size: 1.42rem; line-height: 1.2; letter-spacing: -.025em; }
 .timeline p, .profile-grid p { margin-top: .35rem; }
+.experience-metric { font-weight: 700; }
 .timeline .role-name { color: var(--text); font-weight: 600; }
 .timeline .period { margin-top: 0; color: var(--quiet); }
 .role-heading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .2rem 1rem; }
@@ -557,43 +562,67 @@ nav a:is(
 @media print {
   :root {
     color-scheme: light;
-    --text: #141820;
-    --muted: #303744;
-    --quiet: #303744;
-    --line: #ced2da;
-    --accent: #263958;
+    --text: #171717;
+    --muted: var(--text);
+    --quiet: var(--text);
+    --line: #b5b5b5;
+    --accent: var(--text);
+    --body: Arial, Helvetica, sans-serif;
+    --display: var(--body);
+    --mono: var(--body);
   }
 
-  body { background: white; font-size: 10pt; line-height: 1.3; }
+  body { background: white; font-size: 10.5pt; line-height: 1.32; }
   .shell { width: 100%; }
   .site-header, .skip-link, .portrait, .actions, .project-art, .hero::after,
-  .site-footer, .contact h2, .print-button, .contact-links,
-  .section-banded .text-link { display: none; }
-  .hero, .project, .section-banded, .contact-inner { background: none; }
-  .hero-inner { display: block; padding: 0 0 .75rem; }
-  .hero h1 { font-size: 32pt; }
+  .site-footer, .contact, .section-banded .text-link { display: none; }
+  .hero, .project, .section-banded { background: none; border: 0; }
+  .hero-inner, .hero-copy, .hero-role, .print-contact { display: block; }
+  .hero-inner { padding: 0; }
+  .hero h1 { margin: 0 0 .2rem; font-size: 24pt; line-height: 1.05; letter-spacing: normal; }
   .hero h1 span { display: inline; color: var(--text); }
-  .hero-role { margin-bottom: .35rem; }
+  .hero-role { margin: 0; font-size: inherit; letter-spacing: normal; text-transform: none; }
   .hero-role::before { display: none; }
-  .hero-lead, .hero-summary { margin-top: .35rem; font-size: 10pt; max-width: none; }
-  .metrics dl > div { padding: .3rem .65rem; }
-  .metrics dd { font-size: 15pt; }
-  .metrics dt { font-size: 8pt; }
-  .section { padding-block: .45rem; }
-  .section-heading h2, .split .section-heading h2 { font-size: 16pt; }
-  .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .4rem; margin-top: .45rem; }
-  .project, .timeline li, .profile-grid > div { break-inside: avoid; }
+  .print-contact { margin-top: .15rem; }
+  .hero-lead, .hero-summary { margin-top: .4rem; font-size: inherit; max-width: none; }
+  .hero-lead { letter-spacing: normal; }
+
+  .metrics { margin-top: .4rem; border: 0; }
+  .metrics dl, .metrics dl > div { display: block; }
+  .metrics dl > div, .metrics dl > div:first-child { padding: 0; }
+  .metrics dl > div + div { border: 0; }
+  .metrics dt, .metrics dd { display: inline; margin: 0; font-size: inherit; letter-spacing: normal; }
+  .metrics dt::after { content: ": "; }
+
+  .section { padding-block: .5rem 0; }
+  .section-heading h2, .split .section-heading h2 {
+    margin-bottom: .25rem;
+    padding-bottom: .12rem;
+    border-bottom: 1px solid var(--line);
+    font-size: 13pt;
+    line-height: 1.2;
+    letter-spacing: normal;
+    break-after: avoid;
+  }
+
+  .project-grid, .split, .profile-grid { display: block; }
+  .project-grid { margin: 0; }
+  .project { overflow: visible; border-radius: 0; }
   .project-featured { display: block; min-height: auto; }
-  .project-copy { padding: .5rem; }
-  .project h3, .project-featured h3, .timeline h3, .profile-grid h3 { max-width: none; font-size: 11pt; margin-block: .15rem; }
-  .project .eyebrow, .timeline .period { font-size: 8pt; }
-  .split { display: block; }
-  .timeline { margin: .25rem 0 0; }
-  .timeline li { padding-block: .3rem; }
-  .timeline p, .profile-grid p { margin-top: .12rem; }
-  .profile-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .3rem .75rem; margin-top: .35rem; }
-  .profile-grid > div { padding-top: .2rem; }
-  .contact-inner { display: block; padding: 0; border: 0; }
-  .contact .button { justify-content: start; min-height: auto; padding: 0; border: 0; background: none; font-size: 9pt; }
-  .contact .button::after { margin-inline-start: .35rem; content: "(" attr(href) ")"; }
+  .project-copy { padding: 0; }
+  .project + .project { margin-top: .32rem; }
+  .project, .timeline li, .profile-grid > div { break-inside: avoid; }
+  .project h3, .timeline h3, .profile-grid h3 { max-width: none; font-size: 11pt; margin: 0; letter-spacing: normal; }
+  .project .eyebrow, .timeline .period { font-size: inherit; letter-spacing: normal; }
+  .project .eyebrow, .project h3, .role-heading h3, .role-heading .period,
+  .profile-grid h3, .profile-grid p { display: inline; }
+  .project .eyebrow::after, .role-heading .period::before { content: " - "; white-space: pre; }
+  .profile-grid h3::after { content: ": "; white-space: pre; }
+
+  .timeline { margin: 0; }
+  .timeline li { padding-block: .25rem 0; border: 0; }
+  .timeline p { margin-top: .12rem; }
+  .role-heading { display: block; }
+  .profile-grid > div { padding-top: 0; border: 0; }
+  .profile-grid > div + div { margin-top: .12rem; }
 }
