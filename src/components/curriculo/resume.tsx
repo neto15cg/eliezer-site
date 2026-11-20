@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { ReactNode } from "react";
 import { locales, resumeCopy, type ResumeLocale } from "@/i18n/resume-copy";
-import { LanguageLink, PrintButton } from "./controls";
+import { IntegrationSignal, LanguageLink, PrintButton } from "./controls";
 
 const linkedinUrl = "https://www.linkedin.com/in/eliezer-marques/";
 const githubUrl = "https://github.com/neto15cg";
@@ -145,7 +145,7 @@ function ResumeProjects({ locale }: { locale: ResumeLocale }) {
 
 function ProjectIllustration() {
   return (
-    <div className="project-art network" aria-hidden="true">
+    <IntegrationSignal>
       <div className="network-ring network-ring-outer" />
       <div className="network-ring network-ring-inner" />
       <div className="network-axis network-axis-x" />
@@ -155,7 +155,7 @@ function ProjectIllustration() {
       <span className="network-node node-right" />
       <span className="network-node node-bottom" />
       <span className="network-node node-left" />
-    </div>
+    </IntegrationSignal>
   );
 }
 

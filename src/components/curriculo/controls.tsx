@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 
 type AlternateLanguage = {
   lang: string;
@@ -38,4 +38,28 @@ export function PrintButton({ label }: { label: string }) {
       {label}
     </button>
   );
+}
+
+export function IntegrationSignal({ children }: { children: ReactNode }) {
+  const diagram = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const element = diagram.current;
+    if (!element || !window.IntersectionObserver || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
+
+    const threshold = 0.45;
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.intersectionRatio < threshold) return;
+
+      element.dataset.signal = "";
+      observer.disconnect();
+    }, { threshold });
+    observer.observe(element);
+
+    return () => observer.disconnect();
+  }, []);
+
+  return <div ref={diagram} className="project-art network" aria-hidden="true">{children}</div>;
 }
