@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, DM_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import type { ReactNode } from "react";
 import { locales, profileLinks, resumeCopy, siteUrl, type ResumeLocale } from "@/i18n/resume-copy";
 import "../../app/globals.css";
 
-const bricolage = Bricolage_Grotesque({
-  axes: ["opsz"],
-  subsets: ["latin"],
+const bricolage = localFont({
+  src: "./fonts/bricolage-latin.woff2",
+  weight: "700 800",
   display: "swap",
   variable: "--font-bricolage",
 });
 
-const dmSans = DM_Sans({
-  subsets: ["latin"],
+const dmSans = localFont({
+  src: "./fonts/dm-sans-latin.woff2",
+  weight: "400 700",
   display: "swap",
   variable: "--font-dm-sans",
 });

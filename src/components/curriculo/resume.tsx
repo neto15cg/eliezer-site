@@ -25,9 +25,22 @@ export function Resume({ locale }: { locale: ResumeLocale }) {
               </div>
             </div>
             <figure className="portrait">
-              <div className="portrait-frame">
-                <Image src="/eliezer_m.jpeg" width={800} height={800} alt={copy.portraitAlt} priority unoptimized />
-              </div>
+              <picture className="portrait-frame">
+                <source
+                  type="image/webp"
+                  srcSet="/eliezer_m-480.webp 480w, /eliezer_m-640.webp 640w, /eliezer_m-800.webp 800w"
+                  sizes="(max-width: 29.5rem) calc(100vw - 4rem), (max-width: 49rem) 26rem, (max-width: 78rem) calc(41vw - 3.6rem), 28rem"
+                />
+                <Image
+                  src="/eliezer_m.jpeg"
+                  width={800}
+                  height={800}
+                  alt={copy.portraitAlt}
+                  loading="eager"
+                  fetchPriority="high"
+                  unoptimized
+                />
+              </picture>
               <figcaption><span>Loggi</span><span>{copy.country}</span></figcaption>
             </figure>
           </div>
