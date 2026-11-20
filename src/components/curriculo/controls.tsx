@@ -45,20 +45,48 @@ export function IntegrationSignal({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const element = diagram.current;
-    if (!element || !window.IntersectionObserver || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      return;
-    }
+    const card = element?.closest<HTMLElement>(".project-featured");
+    if (!element || !card || !window.IntersectionObserver) return;
 
-    const threshold = 0.45;
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.intersectionRatio < threshold) return;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const threshold = 0.55;
+    let playedInView = false;
 
+    const playSignal = () => {
+      if (reducedMotion.matches || element.hasAttribute("data-signal")) return;
       element.dataset.signal = "";
-      observer.disconnect();
-    }, { threshold });
-    observer.observe(element);
+    };
 
-    return () => observer.disconnect();
+    const replayOnHover = (event: PointerEvent) => {
+      if (event.pointerType === "mouse") playSignal();
+    };
+
+    const resetSignal = (event: AnimationEvent) => {
+      if (event.animationName === "integration-signal") {
+        element.removeAttribute("data-signal");
+      }
+    };
+
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) {
+        playedInView = false;
+      } else if (!playedInView && entry.intersectionRatio >= threshold) {
+        playedInView = true;
+        playSignal();
+      }
+    }, { threshold: [0, threshold] });
+    observer.observe(element);
+    card.addEventListener("pointerenter", replayOnHover);
+    element.addEventListener("animationend", resetSignal);
+    element.addEventListener("animationcancel", resetSignal);
+
+    return () => {
+      observer.disconnect();
+      card.removeEventListener("pointerenter", replayOnHover);
+      element.removeEventListener("animationend", resetSignal);
+      element.removeEventListener("animationcancel", resetSignal);
+      element.removeAttribute("data-signal");
+    };
   }, []);
 
   return <div ref={diagram} className="project-art network" aria-hidden="true">{children}</div>;
