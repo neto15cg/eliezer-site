@@ -7,7 +7,6 @@ on:
     paths-ignore:
       - "**.md"
       - ".gitignore"
-      - ".env.example"
   workflow_dispatch:
 
 jobs:
@@ -34,8 +33,6 @@ jobs:
 
       - name: Build Application
         run: npm run build
-        env:
-          NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL }}
 
       - name: Deploy to S3
         run: |
